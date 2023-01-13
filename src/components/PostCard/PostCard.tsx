@@ -6,12 +6,10 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { Button, CardActionArea, CardActions } from '@mui/material'
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined'
+
 export default function PostCard(props: any) {
-  // ts date format
   const date = new Date(props.publishedAt)
   const dateFormatted = date.toDateString().split(' ').slice(1)
-
-  console.log(dateFormatted, 'dateFormatted')
 
   return (
     <Card sx={{ maxWidth: 400, height: 530 }}>
