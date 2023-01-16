@@ -1,0 +1,11 @@
+@import '../../assets/styles/variables';
+
+.filter-input {
+  width: 600px;
+
+  input {
+    font-size: $font-size-base;
+    height: 5px;
+    color: $input-text-color;
+  }
+}

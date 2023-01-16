@@ -11,7 +11,9 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import SearchIcon from '@mui/icons-material/Search'
 
-import PostCard from '../../components/PostCard/PostCard'
+import ArticleCard from '../../components/ArticleCard/ArticleCard'
+
+import './HomePage.scss'
 
 interface Article {
   id: number
@@ -34,13 +36,12 @@ export default function HomePage() {
 
   return (
     <Container maxWidth='lg' className='homepage' sx={{ my: 6 }}>
-      <header className='homepage-header'>Filter by keywords</header>
-      <FormControl sx={{ my: 2, width: 600 }}>
+      <Box className='fw-semibold mb-2'>Filter by keywords</Box>
+      <FormControl className='filter-input mb-5'>
         <OutlinedInput
           value={text}
           onChange={e => setText(e.target.value)}
-          sx={{ height: '40px', fontSize: '16px' }}
-          placeholder='The most successful IT companies in 2020'
+          placeholder='Search'
           startAdornment={
             <InputAdornment position='start'>
               <SearchIcon sx={{ fontSize: '20px' }} />
@@ -49,17 +50,13 @@ export default function HomePage() {
         />
       </FormControl>
       <main className='homepage-content'>
-        Results: {articles.length}
+        <Box className='fw-semibold'>Results: {articles.length}</Box>
         <Divider />
-        <Box sx={{ flexGrow: 1, marginY: '30px' }}>
-          <Grid
-            container
-            spacing={{ xs: 2, md: 3, lg: 4 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
-          >
+        <Box className='my-5'>
+          <Grid container spacing={{ xs: 4, lg: 5 }}>
             {articles.map((article: Article, index) => (
-              <Grid item xs={2} sm={4} md={4} key={index}>
-                <PostCard
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <ArticleCard
                   id={article.id}
                   imageUrl={article.imageUrl}
                   title={article.title}

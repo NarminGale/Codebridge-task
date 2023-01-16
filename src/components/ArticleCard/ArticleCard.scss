@@ -1,0 +1,30 @@
+@import './src/assets/styles/mixins';
+@import './src/assets/styles/variables';
+
+.article {
+  &-content {
+    &__date {
+      font-size: 14px !important;
+      color: $text-color-light;
+    }
+
+    &__title {
+      color: $text-color;
+      @include truncate(2);
+    }
+
+    &__summary {
+      color: $text-color-secondary;
+      font-size: $font-size-base;
+      @include truncate(4);
+    }
+  }
+
+  &-action {
+    &__button {
+      text-transform: none !important;
+      color: $text-color;
+      font-size: $font-size-base;
+    }
+  }
+}

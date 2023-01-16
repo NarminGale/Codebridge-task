@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
+// import bootstrap
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 /* sass files */
-@import './assets/styles/_variables.scss';
 @import './assets/styles/_mixins.scss';
+@import './assets/styles/_variables.scss';
+
+* {
+  font-family: $font-family !important;
+}
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  background-color: $background-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

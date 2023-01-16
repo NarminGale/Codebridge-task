@@ -1,15 +1,9 @@
-$font-weight-bolder: 900;
-$secondary-color: #ffb400;
-$loader-transition: all 0.5s 0.5s ease-out;
+$background-color: #fdfdfd;
+$text-color: #363636 !important;
+$text-color-light: #afafaf;
+$text-color-secondary: #5b5b5b;
+$input-text-color: #575757;
 
-$background-color: #e5e5e5;
-$text-color: #f1d3b3;
-$btn-width: 120px;
-$btn-height: 40px;
-$block-padding: 60px;
+$font-size-base: 16px !important;
 
-/* Screen breakpoints */
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+$font-family: 'Montserrat', sans-serif;

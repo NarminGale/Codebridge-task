@@ -1,0 +1,38 @@
+@import '../../assets/styles/variables';
+
+.article {
+  &-image {
+    height: 245px;
+    z-index: -1;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-container {
+    height: 700px;
+
+    .article {
+      &-card {
+        min-height: 250px;
+
+        &__title {
+          color: $text-color;
+          line-height: 29px;
+        }
+
+        &__content {
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+
+      &-back-button {
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}
