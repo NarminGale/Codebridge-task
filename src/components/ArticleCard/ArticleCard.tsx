@@ -20,6 +20,27 @@ export default function ArticleCard(props: any) {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>, id: number) =>
     navigate(`/articles/${id}`)
 
+  const getHighlightedText = (text: string, highlight: string) => {
+    // Split on highlight term and include term into parts, ignore case
+    const parts = text.split(new RegExp(`(${highlight})`, 'gi'))
+    return (
+      <span>
+        {parts.map((part: string, i: number) => (
+          <span
+            key={i}
+            style={
+              part.toLowerCase() === highlight.toLowerCase()
+                ? { background: 'yellow' }
+                : {}
+            }
+          >
+            {part}
+          </span>
+        ))}
+      </span>
+    )
+  }
+
   return (
     <Card
       className='article position-relative'
@@ -41,10 +62,11 @@ export default function ArticleCard(props: any) {
           variant='h5'
           marginBottom={2}
         >
-          {props.title}
+          {getHighlightedText(props.title, props.highlight)}
         </Typography>
         <Typography className='article-content__summary' variant='body2'>
-          {props.summary.substring(0, 100)}...
+          {getHighlightedText(props.summary.substring(0, 100), props.highlight)}
+          ...
         </Typography>
       </CardContent>
       <CardActions className='article-action position-absolute bottom-0 pb-3 ps-3'>
