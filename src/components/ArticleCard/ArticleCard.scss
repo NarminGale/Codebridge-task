@@ -2,6 +2,9 @@
 @import './src/assets/styles/variables';
 
 .article {
+  max-width: $card-max-width;
+  height: $card-height;
+
   &-content {
     &__date {
       font-size: 14px !important;

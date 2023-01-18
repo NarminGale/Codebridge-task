@@ -43,10 +43,7 @@ export default function ArticleCard({id, imageUrl, title, summary, highlight, pu
   }
 
   return (
-    <Card
-      className='article position-relative'
-      sx={{ maxWidth: 400, height: 512 }}
-    >
+    <Card className='article position-relative'>
       <CardMedia
         component='img'
         height='217'

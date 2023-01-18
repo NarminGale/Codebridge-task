@@ -1,9 +1,3 @@
-@mixin vertical-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 @mixin truncate($lines: 1) {
   overflow: hidden;
   display: -webkit-box;
