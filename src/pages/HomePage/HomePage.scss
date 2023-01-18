@@ -1,11 +1,17 @@
 @import '../../assets/styles/variables';
 
-.filter-input {
-  width: 600px;
+.homepage {
+  .filter-input {
+    width: $input-width;
 
-  input {
-    font-size: $font-size-base;
-    height: 5px;
-    color: $input-text-color;
+    input {
+      font-size: $font-size-base;
+      height: $input-height;
+      color: $input-text-color;
+    }
+  }
+
+  .css-uj7n6r-MuiPaper-root-MuiCard-root {
+      height: $card-height;
   }
 }

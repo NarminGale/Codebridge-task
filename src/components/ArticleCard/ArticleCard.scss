@@ -10,7 +10,6 @@
 
     &__title {
       color: $text-color;
-      @include truncate(2);
     }
 
     &__summary {
