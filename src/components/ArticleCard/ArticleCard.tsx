@@ -9,10 +9,10 @@ import Typography from '@mui/material/Typography'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined'
 
-import { Article } from '../../common/types'
+import { IArticleCard } from '../../common/types'
 import './ArticleCard.scss'
 
-export default function ArticleCard({id, imageUrl, title, summary, highlight, publishedAt}: Article) {
+export default function ArticleCard({id, imageUrl, title, summary, highlight, publishedAt}: IArticleCard) {
   const navigate = useNavigate()
 
   const date = new Date(publishedAt)

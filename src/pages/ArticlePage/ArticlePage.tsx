@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
@@ -8,14 +8,11 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
+import { IArticlePage } from '../../common/types'
 import './ArticlePage.scss'
 
 export default function ArticlePage() {
-  const [article, setArticle] = useState<{
-    title: string
-    summary: string
-    imageUrl: string
-  }>({
+  const [article, setArticle] = useState<IArticlePage>({
     title: '',
     summary: '',
     imageUrl: '',

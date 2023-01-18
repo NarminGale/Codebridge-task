@@ -1,8 +1,8 @@
 import { Box, CircularProgress } from '@mui/material'
 
-import {LoaderProps} from '../../common/types'
+import { ILoaderProps } from '../../common/types'
 
-export default function Loader({isLoaded, children}: LoaderProps) {
+export default function Loader({isLoaded, children}: ILoaderProps) {
  return (
   <>
    {isLoaded ? (

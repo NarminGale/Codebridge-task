@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import SearchIcon from '@mui/icons-material/Search'
 
-import { Article } from '../../common/types'
+import { IArticleCard } from '../../common/types'
 import Loader from '../../components/Loader/Loader'
 import ArticleCard from '../../components/ArticleCard/ArticleCard'
 import './HomePage.scss'
@@ -29,18 +29,18 @@ export default function HomePage() {
       }
       else {
           // Filter articles by title
-          const filteredArticlesByTitle = articles.filter((article: Article) => {
+          const filteredArticlesByTitle = articles.filter((article: IArticleCard) => {
               return article.title.toLowerCase().includes(text.toLowerCase())
           })
 
           // Filter articles by summary and remove duplicates
           const filteredArticlesBySummary = articles
-              .filter((article: Article) => {
+              .filter((article: IArticleCard) => {
                   return !filteredArticlesByTitle
-                      .map((article: Article) => article.id)
+                      .map((article: IArticleCard) => article.id)
                       .includes(article.id)
               })
-              .filter((article: Article) => {
+              .filter((article: IArticleCard) => {
                   return article.summary
                       .substring(0, 100)
                       .toLowerCase()
@@ -98,7 +98,7 @@ export default function HomePage() {
        <Box className='my-5'>
         {/* Articles container starts */}
         <Grid container spacing={{ xs: 4, lg: 5 }}>
-         {filteredArticles.map((article: Article, index) => (
+         {filteredArticles.map((article: IArticleCard, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
            <ArticleCard
             id={article.id}

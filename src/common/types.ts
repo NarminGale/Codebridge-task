@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface Article {
+interface IArticleCard {
  id: number
  imageUrl: string
  title: string
@@ -9,7 +9,16 @@ export interface Article {
  publishedAt: string
 }
 
-export interface LoaderProps {
+interface IArticlePage {
+ title: string
+ summary: string
+ imageUrl: string
+}
+
+interface ILoaderProps {
  isLoaded: boolean
  children: React.ReactNode
 }
+
+// export all types from this file
+export type { IArticleCard, IArticlePage, ILoaderProps }
